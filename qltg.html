@@ -118,8 +118,23 @@
             
             <button type="submit">Đăng Nhập</button>
         </form>
+
+        <h2>Đăng Ký Tài Khoản</h2>
+        <form id="register-form">
+            <label for="email">Gmail:</label>
+            <input type="text" id="email" placeholder="Nhập Gmail" required>
+            
+            <label for="phone">Số Điện Thoại:</label>
+            <input type="text" id="phone" placeholder="Nhập số điện thoại" required>
+            
+            <label for="reg-password">Mật Khẩu:</label>
+            <input type="password" id="reg-password" placeholder="Nhập mật khẩu" required>
+            
+            <button type="submit">Đăng Ký</button>
+        </form>
+
         <h2>Nghe Nhạc</h2>
-        <iframe width="100%" height="315" src="https://audiotruyenfull.com/wp-content/uploads/2023/07/NhacNen2.mp3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="100%" height="315" src="https://audiotruyenfull.com/wp-content/uploads/2023/07/NhacNen2.mp3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media ; gyroscope; picture-in-picture" allowfullscreen></iframe>
     
         <form id="time-management-form">
             <label for="task">Nhiệm Vụ:</label>
@@ -134,7 +149,7 @@
         <h2>Danh Sách Nhiệm Vụ</h2>
         <ul id="task-list">
             <!-- Danh sách nhiệm vụ sẽ được thêm vào đây -->
-        </ ul>
+        </ul>
 
         <h2>Quay Số Ngẫu Nhiên</h2>
         <button id="generate-button">Quay Số</button>
@@ -179,6 +194,33 @@
             const randomNumber = Math.floor(Math.random() * 9999) + 1;
             randomNumberDisplay.textContent = `Số ngẫu nhiên: ${randomNumber}`;
         });
+
+        // Xử lý đăng nhập
+        const loginForm = document.getElementById('login-form');
+
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Ngăn chặn hành vi mặc định của form
+            // Thực hiện kiểm tra đăng nhập ở đây (nếu cần)
+
+            // Chuyển hướng đến trang web khác
+            window.location.href = 'https://www.youtube.com/@thien7837'; // Thay đổi URL này thành trang bạn muốn
+        });
+
+        // Xử lý đăng ký tài khoản
+        const registerForm = document.getElementById('register-form');
+
+        registerForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Ngăn chặn hành vi mặc định của form
+            const emailInput = document.getElementById('email');
+            const phoneInput = document.getElementById('phone');
+            const regPasswordInput = document.getElementById('reg-password');
+            // Thực hiện xử lý đăng ký ở đây (ví dụ: gửi dữ liệu đến server)
+            alert(`Đăng ký thành công với Gmail: ${emailInput.value} và Số điện thoại: ${phoneInput.value}`);
+            emailInput.value = '';
+            phoneInput.value = '';
+            regPasswordInput.value = '';
+        });
     </script>
+</ ```html
 </body>
 </html>
